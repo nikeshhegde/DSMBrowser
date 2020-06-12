@@ -24,9 +24,9 @@ public class GitHubService {
 			e.printStackTrace();
 		}
 	
-	    
-	    System.out.println("Response "+ jsonResponse.getBody().toString());
-	    
+		if(jsonResponse.getStatus()==200 && jsonResponse.getBody()!=null){
+			System.out.println("Response "+ jsonResponse.getBody().toString());
+		}
 	}
 	
 	public static void main(String[] args) {
